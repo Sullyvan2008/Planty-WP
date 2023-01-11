@@ -11,3 +11,11 @@
  Tags:         bricolage, outils, lexique
  Text Domain:  planty
 */
+
+body {
+    background-color: blue;
+}
+
+#site-logo {
+    width: 20px;
+}
