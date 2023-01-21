@@ -28,31 +28,81 @@
 
 .header-inner {
     padding: 0;
-    margin: 0;
+    margin: 0 0 0 40px;
     width: auto;
 }
 
-li.menu-item a {
+.menu-item a {
     padding: 30px;
     font-size: 16px;
     font-family: 'Syne';
+    font-weight: 400;
     color: black !important;
+    text-decoration: none;
 }
 
-li.menu-item a:hover {
+.menu-item a:hover {
     text-decoration: none;
     font-weight: 700;
 }
 
-#menu-item-13 a {
+.menu-commander a {
     padding: 30px 61px 30px 61px;
     font-weight: 700;
     background-color: #DC9F96;
     color: white !important;
+    font-family: 'Syne';
+    font-size: 16px;
+    border: solid 1px #DC9F96;
 }
 
-#menu-item-13 a:hover {
+.menu-commander a:hover {
     background-color: #C02E44;
+    text-decoration: none;
+    border: solid 1px #C02E44;
+}
+
+@media (max-width: 768px) {
+    .site-logo {
+        width: 200px;
+    }
+    #site-header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .header-inner {
+        margin: 0;
+    }
+    .menu-commander a, .menu-item a {
+        text-align: center;
+        padding: 30px;
+    }
+    .toggle-text {
+        display: none;
+    }
+}
+@media (max-width: 450px) {
+    .site-logo {
+        width: 200px;
+    }
+    #site-header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .header-inner {
+        margin: 0;
+    }
+    .menu-commander a, .menu-item a {
+        text-align: center;
+        padding: 30px;
+    }
+    .toggle-text {
+        display: none;
+    }
 }
 
 /* MAIN */
@@ -84,7 +134,170 @@ li.menu-item a:hover {
 .fluentform .ff-el-group {
     margin-bottom: 22px;
 }
+form.fluent_form_3 .ff-btn-submit, form.fluent_form_5 .ff-btn-submit{
+    width: 198px;
+    height: 55px;
+    text-align: center;
+    font-size: 15px;
+    font-family: 'Syne';
+    font-weight: 400;
+    background-color: #E0B9B4 !important;
+    text-transform: capitalize;
+    opacity: 1;
+}
+form.fluent_form_3 .ff-btn-submit:hover, form.fluent_form_5 .ff-btn-submit:hover {
+    background-color: #C02E44 !important;
+    opacity: 1;
+}
+.fluentform .ff-text-center {
+    padding-top: 40px;
+}
+#fluentform_3 .ff-el-input--label {
+    color: black;
+    font-family: 'Syne';
+    font-size: 20px;
+    font-weight: 400;
+}
 
-ff-btn ff-btn-submit ff-btn-md ff_btn_style {
-    display: none;
+
+
+/* FORMULAIRES COMMANDE */
+
+#fluentform_5 {
+    padding: 50px 0 50px 0;
+}
+.titre-commande h2{
+    font-size: 30px;
+    font-weight: 700;
+    font-family: 'Syne';
+    color: white;
+    margin: 0 0 10px 0;
+}
+.frm-fluent-form .ff-t-cell:first-of-type {
+    padding-right: 30px;
+    border-right: solid 1px white;
+}
+.frm-fluent-form .ff-t-cell:last-of-type {
+    padding-left: 30px;
+}
+#fluentform_5 .ff-el-input--label label{
+    color: white;
+    font-family: 'Syne';
+    font-size: 20px;
+    font-weight: 400;
+}
+#fluentform_5 .ff-el-form-control {
+    width: 383px; 
+    height: 71px;
+    border-radius: 7px;
+}
+
+@media (max-width:768px) {
+    .frm-fluent-form .ff-t-cell:first-of-type {
+        max-width: 50%;
+    }
+    .frm-fluent-form .ff-t-cell:last-of-type {
+        max-width: 50%;
+    }
+    #fluentform_5 .ff-el-form-control {
+        width: 300px;
+        height: 60px;
+    }
+}
+@media (max-width: 450px) {
+    .frm-fluent-form .ff-t-cell:first-of-type {
+        max-width: 100%;
+        padding-right: 0;
+        border-right: none;
+        padding-bottom: 25px;
+    }
+    .frm-fluent-form .ff-t-cell:last-of-type {
+        max-width: 100%;
+        padding-left: 0;
+    }
+    #fluentform_5 .ff-el-form-control {
+        width: 100%;
+        height: 60px;
+    }
+    .titre-commande h2 {
+        font-size: 22px;
+        text-align: center;
+    }
+}
+
+
+/* BOUTON QUANTITÉ */
+
+.input-group {
+    display: flex;
+    flex-direction: row;
+    gap:0;
+    align-items: center;
+    background-color: #DC9F96;
+    border-radius: 5px;
+}
+
+.input-group input {
+    max-width: 51px;
+    height: 51px;
+
+}
+.input-group-button {
+    display: flex;
+    flex-direction: column;
+    max-width: 31px;
+    
+}
+.input-ok {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.button-ok {
+    width: 100px; 
+    height: 51px;
+    background-color: #E0B9B4;
+    font-size: 15px;
+    font-family: 'Syne';
+    font-weight: 400;
+    padding: 10px 0 10px 0;
+    border-radius: 5px;
+}
+.button-ok:hover {
+    text-decoration: none !important;
+    background-color: #C02E44 !important;
+
+}
+.input-number-increment, .input-number-decrement {
+    padding: 0 10px 0 10px;
+    font-size: 18px;
+    font-family: 'Syne';
+    color: white;
+    text-align: center;
+}
+.input-number-increment:hover, .input-number-decrement:hover {
+    cursor: pointer;
+}
+.input-number-increment {
+    border-bottom: solid 1px white;
+}
+.input-number {
+    color: black; 
+    font-size: 20px;
+    border: 1px solid white;
+    border-radius: 5px 0 0 5px !important;
+}
+
+@media (min-width: 600px) and (max-width: 1000px) {
+    .button-ok {
+        width: 75px;
+    }
+}
+@media (max-width: 450px) {
+    .button-ok {
+        width: 150px;
+    }
+    .input-group input {
+        max-width: 70px;
+    }
 }
